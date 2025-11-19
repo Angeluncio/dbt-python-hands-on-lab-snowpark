@@ -19,7 +19,7 @@ with sprint_results as (select * from {{ source('formula1', 'sprint_results') }}
             iff(
                 contains(fastest_lap_time, '\N'),
                 null,
-                {{ convert_laptime("fastest_lap_time") }}
+                fastest_lap_time
             ) as fastest_lap_time,
             status_id as status_id
         from sprint_results
