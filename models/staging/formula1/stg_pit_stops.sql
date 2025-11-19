@@ -10,7 +10,7 @@ with
             lap,
             "TIME" as pit_stop_time,
             duration as pit_stop_duration_seconds,
-            {{ convert_laptime("pit_stop_duration_seconds") }} as pit_stop_duration,
+            pit_stop_duration_seconds as pit_stop_duration,
             milliseconds as pit_stop_milliseconds
         from pit_stops
     )
